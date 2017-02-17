@@ -6,7 +6,8 @@ import csv
 import codecs
 
 #map non unicode values 
-non_bmp_map = dict.fromkeys(range(0x10000,sys.maxunicode+1),0xfffd)
+upperbound = sys.maxunicode+1
+non_bmp_map = dict.fromkeys(range(0x10000,upperbound),0xfffd)
 errors = 0
 
 #download webpage - input = webpage link
